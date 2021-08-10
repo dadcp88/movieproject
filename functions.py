@@ -33,39 +33,39 @@ def movie_add():
     print(movie)
 
 
-def movie_read():
-    for movies in movie:
-        print(movies)
+def movie_read(dict):
+    for movies in dict:
+        print(dict[movies])
 
 
 # def movie_search():
 #
-def test_dict(dict):
-    keyslist = []
-    itemsList = dict.items()
-    print(itemsList)
-    valueslist = dict.values()
-    print(valueslist)
-    getlist = dict.get('starwars0')
-    getgetlist = getlist.get('Director')
-    print(getgetlist)
-    print(getlist)
-    blalist = dict.keys()
-    print(blalist)
+# def test_dict(dict):
+#     keyslist = []
+#     itemsList = dict.items()
+#     print(itemsList)
+#     valueslist = dict.values()
+#     print(valueslist)
+#     getlist = dict.get('starwars0')
+#     getgetlist = getlist.get('Director')
+#     print(getgetlist)
+#     print(getlist)
+#     blalist = dict.keys()
+#     print(blalist)
 
 
-def movie_search(dict):
-    search = str(input('Ingrese nombre pelicula: '))
-
-    for x in dict:
-        if search == str(x):
-            print(f"Nombre Pelicula: ", x)
-            for keys in dict_keys(dict[x]):
-                print(f'{keys}:', dict[x][keys])  # print every keys with the values
-        else:
-            continue
-    print("pelicula no encontrada")
-    return False
+# def movie_search(dict):
+#     search = str(input('Ingrese nombre pelicula: '))
+#
+#     for x in dict:
+#         if search == str(x):
+#             print(f"Nombre Pelicula: ", x)
+#             for keys in dict_keys(dict[x]):
+#                 print(f'{keys}:', dict[x][keys])  # print every keys with the values
+#         else:
+#             continue
+#     print("pelicula no encontrada")
+#     return False
 
 
 def dict_keys(dict):  # Return keys from a dictionary
@@ -73,7 +73,7 @@ def dict_keys(dict):  # Return keys from a dictionary
     return dict_keys
 
 
-def advance_search(dict, search_key, search):
+def advance_search(dict, search_key, search): #receive dictionary, search_key (is the key for every record), search (is the user input)
     for x in dict:
         getvalues = dict.get(x)
         getvalues = getvalues[search_key]
